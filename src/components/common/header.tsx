@@ -12,7 +12,13 @@ export const HeaderData = [
 
 export const Header = () => {
   return (
-    <div className="flex place-items-center bg-fadding-blue p-2 gap-8">
+    <div
+      className="flex w-full  place-items-center bg-grey py-5 pl-[450px] gap-8 "
+      style={{
+        clipPath:
+          "polygon(0% 0%, 100% 0%, 100% 100%, 83% 100%, 31% 100%, 30% 78%, 0 78%)",
+      }}
+    >
       {HeaderData.map((header) => (
         <section key={header.id} className="flex place-items-center gap-2">
           <Icon icon={header.icon} />
