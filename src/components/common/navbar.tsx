@@ -25,9 +25,13 @@ export const Navbar = memo(() => {
 
   return (
     <div
-      className={`flex px-5 py-5 justify-between place-items-center sticky top-0 z-20 ${
+      className={`flex px-5 py-5 justify-between place-items-center sticky   top-0 z-20 ${
         isScrolled ? "bg-fadding-blue" : ""
       }`}
+      style={{
+        clipPath:
+          "polygon(0% 0%, 100% 0%, 100% 88%, 80% 90%, 32% 88%, 31% 100%, 0 100%)",
+      }}
     >
       <section>
         <img

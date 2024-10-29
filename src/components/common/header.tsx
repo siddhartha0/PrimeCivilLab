@@ -13,7 +13,7 @@ export const HeaderData = [
 export const Header = () => {
   return (
     <div
-      className="flex w-full  place-items-center bg-grey py-5 pl-[450px] gap-8 "
+      className="flex w-full  place-items-center bg-grey py-5 gap-8 justify-center "
       style={{
         clipPath:
           "polygon(0% 0%, 100% 0%, 100% 100%, 83% 100%, 31% 100%, 30% 78%, 0 78%)",
