@@ -108,15 +108,14 @@ export const Text = React.memo(
           //--------------------END of Size & FONT WEIGHT-------------------------//
 
           //----------color------------//
-          "text-black-900": usage == "brand",
-          "text-black": usage == "black",
+          "text-brand": usage == "brand",
           "text-black-2": usage == "black2",
           "text-black-3": usage == "black3",
           "text-black-4": usage == "black4",
 
-          "text-black-1000": usage == "default",
-          "text-black-800": usage == "primary",
-          "text-black-600": usage == "info-primary",
+          "text-black": usage == "default",
+          "text-grey": usage == "primary",
+          "text-fadish-white": usage == "info-primary",
 
           "text-white": usage == "click",
           "text-fadish-blue": usage == "info",
