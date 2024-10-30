@@ -27,14 +27,14 @@ module.exports = {
         sans: ["Poppins", "Arial", "sans-serif"],
       },
       animation: {
-        "clip-path-reveal": "clip-path-reveal 1s ease-out forwards",
-        "yellow-shadow": "yellow-shadow 1s ease-out",
+        "clip-path-reveal":
+          "clip-path-reveal 1s ease-out forwards, yellow-shadow 1s ease-out",
       },
       keyframes: {
         "clip-path-reveal": {
           "0%": {
             clipPath:
-              "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%, 0% 100%, 0% 78%, 0% 78%)",
+              "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%)",
           },
           "100%": {
             clipPath:
@@ -44,16 +44,12 @@ module.exports = {
         "yellow-shadow": {
           "0%": {
             boxShadow: "0 0 0 rgba(250, 204, 21, 0)",
-            clipPath:
-              "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%, 0% 100%, 0% 78%, 0% 78%)",
           },
           "50%": {
             boxShadow: "0 4px 6px -1px #fa9a00, 0 2px 4px -1px #fa9a00",
           },
           "100%": {
             boxShadow: "0 0 0 rgba(250, 204, 21, 0)",
-            clipPath:
-              "polygon(0% 0%, 100% 0%, 100% 100%, 83% 100%, 31% 100%, 30% 78%, 0 78%)",
           },
         },
       },
