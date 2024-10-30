@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { A } from "../../../assets/icons/A";
 import { Text } from "../../units";
 
 export const BannerInformations = [
@@ -29,16 +31,24 @@ export const BannerInfo = () => {
     <div className="grid grid-cols-3 gap-10 px-36  ">
       {BannerInformations.map((info) => (
         <section
-          className="bg-white shadow-xl p-6 flex flex-col gap-2"
+          className="bg-white shadow-xl p-6 flex flex-col gap-3"
           key={info.id}
         >
+          <div className="w-8">
+            <A />
+          </div>
           <Text usage="black4" size="body-md-default">
             {info.title}
           </Text>
           <Text size="body-sm-rare">{info.subtitle}</Text>
-          <Text size="body-base-default" usage="black4">
+          <Text
+            size="body-base-default"
+            usage="black4"
+            className="line-clamp-6"
+          >
             {info.content}
           </Text>
+          <Link to="">Read More</Link>
         </section>
       ))}
     </div>
