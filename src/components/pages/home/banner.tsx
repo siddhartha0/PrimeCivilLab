@@ -2,8 +2,9 @@ import { Text } from "../../units";
 import { Button } from "../../units/Button";
 import slider from "../../../assets/images/slider1.jpg";
 import banner1 from "../../../assets/images/slider2.jpg";
-import banner2 from "../../../assets/images/slider3.jpg";
+import banner2 from "../../../assets/images/slider6.jpg";
 import banner3 from "../../../assets/images/slider4.jpg";
+
 import { useEffect, useState } from "react";
 import { BannerInfo } from "./banner-info";
 
@@ -19,7 +20,6 @@ export const Banner = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  console.log("rendereds");
   return (
     <div
       className="flex bg-cover bg-center font-sans relative"
@@ -51,7 +51,7 @@ export const Banner = () => {
           </section>
         </div>
       </section>
-      <section className="absolute -bottom-80">
+      <section className="absolute -bottom-72">
         <BannerInfo />
       </section>
     </div>

@@ -22,7 +22,7 @@ export const Header = () => {
       {HeaderData.map((header) => (
         <section key={header.id} className="flex place-items-center gap-2">
           <Icon icon={header.icon} />
-          <Text size="body-base-default" usage="brand">
+          <Text size="body-base-default" usage="black4">
             {header.title}
           </Text>
         </section>
