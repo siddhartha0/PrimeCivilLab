@@ -1,9 +1,9 @@
 import { Text } from "../../units";
 import { Button } from "../../units/Button";
-import slider from "../../../assets/images/bg.jpg";
-import banner1 from "../../../assets/images/banner1.jpeg";
-import banner2 from "../../../assets/images/banner2.jpeg";
-import banner3 from "../../../assets/images/banner3.jpeg";
+import slider from "../../../assets/images/slider1.jpg";
+import banner1 from "../../../assets/images/slider2.jpg";
+import banner2 from "../../../assets/images/slider3.jpg";
+import banner3 from "../../../assets/images/slider4.jpg";
 import { useEffect, useState } from "react";
 import { BannerInfo } from "./banner-info";
 
