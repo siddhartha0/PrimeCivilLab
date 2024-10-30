@@ -44,7 +44,7 @@ export const Banner = () => {
           </section>
         </div>
       </section>
-      <section className="absolute -bottom-56">
+      <section className="absolute -bottom-64">
         <BannerInfo />
       </section>
     </div>
