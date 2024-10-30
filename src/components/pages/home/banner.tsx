@@ -22,7 +22,7 @@ export const Banner = () => {
 
   return (
     <div
-      className="flex bg-cover bg-center font-sans relative"
+      className="flex bg-cover bg-center font-sans relative "
       style={{ backgroundImage: `url(${images[bannerImage]})` }}
     >
       <section className="flex flex-col gap-10 w-[800px] px-8 py-28 font-sans">
