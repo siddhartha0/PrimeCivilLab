@@ -5,6 +5,7 @@ import banner1 from "../../../assets/images/banner1.jpeg";
 import banner2 from "../../../assets/images/banner2.jpeg";
 import banner3 from "../../../assets/images/banner3.jpeg";
 import { useEffect, useState } from "react";
+import { BannerInfo } from "./banner-info";
 
 export const Banner = () => {
   const images = [slider, banner1, banner2, banner3];
@@ -21,7 +22,7 @@ export const Banner = () => {
   console.log("rendereds");
   return (
     <div
-      className="flex bg-cover bg-center font-sans"
+      className="flex bg-cover bg-center font-sans relative"
       style={{ backgroundImage: `url(${images[bannerImage]})` }}
     >
       <section className="flex flex-col gap-20 w-[675px] px-8 py-28 font-sans">
@@ -42,6 +43,9 @@ export const Banner = () => {
             </Button>
           </section>
         </div>
+      </section>
+      <section className="absolute -bottom-56">
+        <BannerInfo />
       </section>
     </div>
   );

@@ -38,6 +38,10 @@ export type TextSize =
   | "body-base-rare";
 
 export type TextUsage =
+  | "black"
+  | "black2"
+  | "black3"
+  | "black4"
   | "brand"
   | "default"
   | "primary"
@@ -105,6 +109,11 @@ export const Text = React.memo(
 
           //----------color------------//
           "text-black-900": usage == "brand",
+          "text-black": usage == "black",
+          "text-black-2": usage == "black2",
+          "text-black-3": usage == "black3",
+          "text-black-4": usage == "black4",
+
           "text-black-1000": usage == "default",
           "text-black-800": usage == "primary",
           "text-black-600": usage == "info-primary",
