@@ -25,20 +25,27 @@ export const Banner = () => {
       className="flex bg-cover bg-center font-sans relative"
       style={{ backgroundImage: `url(${images[bannerImage]})` }}
     >
-      <section className="flex flex-col gap-6 w-[800px] px-8 py-14 font-sans">
-        <Text size="heading-lg-mid" secondaryFont usage="primary">
-          Delivering proven engineering solutions backed by decades of
-          experience and a commitment to quality
+      <section className="flex flex-col gap-10 w-[800px] px-8 py-28 font-sans">
+        <Text
+          size="heading-lg-mid"
+          secondaryFont
+          usage="primary"
+          className="capitalize"
+        >
+          Excellence Through Expertise
         </Text>
-        <div className="flex flex-col gap-6 w-[65%]">
+        <div className="flex flex-col gap-7 w-[65%]">
           <Text usage="info-primary" size="body-md-mid" secondaryFont>
-            Excellence Through Expertise
+            Delivering proven engineering solutions backed by decades of
+            experience and a commitment to quality
           </Text>
           <section className="flex gap-3">
-            <Button size="small" secondaryFont>
-              Request Testing
-            </Button>
-            <Button size="small" usage="primary" secondaryFont>
+            <Button
+              size="default"
+              usage="brand"
+              secondaryFont
+              className="font-semibold"
+            >
               Contact us
             </Button>
           </section>

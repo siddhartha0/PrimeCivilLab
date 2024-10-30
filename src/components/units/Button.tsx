@@ -5,7 +5,7 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   size?: "default" | "small";
-  usage?: "brand" | "click" | "primary" | "default";
+  usage?: "brand" | "click" | "primary" | "default" | "";
   className?: string;
   secondaryFont?: boolean;
 }
@@ -40,7 +40,7 @@ export const Button = React.memo(
             //--------- Background Color------------//
             "bg-fadish-blue text-white ": usage === "default",
             "bg-yellow text-white ": usage === "primary",
-            "bg-milky-green text-white ": usage === "brand",
+            "bg-brand text-white ": usage === "brand",
             "bg-white text-fade-blue ": usage === "click",
             //--------- End of Background Color------------//
           }
