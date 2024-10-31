@@ -49,7 +49,7 @@ export const TestingMethods = [
 
 export const Core = () => {
   return (
-    <div className="flex flex-col bg-white px-36 py-16 gap-24">
+    <div className="flex flex-col bg-white px-32 py-16 gap-24">
       <section className="flex flex-col gap-10 " id="services">
         <div
           className="flex text-center place-items-center justify-center gap-6"
@@ -63,7 +63,7 @@ export const Core = () => {
         </div>
         <section className="grid grid-cols-3 gap-6">
           {TestingMethods.map((method) => (
-            <div key={method.id} className="flex flex-col gap-4">
+            <div key={method.id} className="flex flex-col gap-4 pb-4">
               <Icon icon={method.icon} fontSize={24} color="#fa9a00" />
               <section className="flex flex-col gap-2">
                 <Text size="body-base-rare" secondaryFont>
