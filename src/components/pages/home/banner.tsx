@@ -30,7 +30,7 @@ export const Banner = () => {
           size="heading-lg-mid"
           secondaryFont
           usage="primary"
-          className="capitalize"
+          className="uppercase"
         >
           Excellence Through Expertise
         </Text>

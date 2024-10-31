@@ -26,7 +26,7 @@ export const Navbar = memo(() => {
   return (
     <div
       className={`flex p-6 justify-between place-items-center sticky animate-clip-path-reveal   top-0 z-20 ${
-        isScrolled ? "bg-white" : ""
+        isScrolled ? "bg-white " : ""
       }`}
       style={{
         clipPath:
@@ -37,7 +37,7 @@ export const Navbar = memo(() => {
         <img
           src={logo}
           alt="company logo"
-          className="w-52 cursor-pointer "
+          className="w-52 cursor-pointer"
           onClick={() => nav("/")}
         />
       </section>
