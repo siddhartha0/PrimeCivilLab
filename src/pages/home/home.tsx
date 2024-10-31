@@ -8,7 +8,9 @@ export const Home = () => {
     <LandingPageLayout>
       <div className="flex flex-col ">
         <Banner />
-        <Core />
+        <div className="pt-72">
+          <Core />
+        </div>
         <Membership />
       </div>
     </LandingPageLayout>

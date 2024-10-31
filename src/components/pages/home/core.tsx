@@ -63,8 +63,8 @@ export const Core = () => {
   return (
     <div className="flex flex-col bg-white px-36 py-16 gap-24">
       <section className="flex flex-col gap-4">
-        <Text size="heading-lg-default" usage="brand">
-          Testing Methods
+        <Text size="heading-lg-default" usage="brand" secondaryFont>
+          Our Services
         </Text>
         <section className="grid grid-cols-3">
           {TestingMethods.map((method) => (
