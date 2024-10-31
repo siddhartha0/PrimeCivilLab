@@ -2,6 +2,7 @@ import { Text } from "../../units";
 import { BlogsAndArticles } from "./blogs-and-articles";
 import bgone from "../../../assets/images/blog1.jpg";
 import bgtwo from "../../../assets/images/bg-office-black.jpg";
+import { Accordian } from "../../common/accordian";
 
 export const BlogsAndArticlesDatas = [
   {
@@ -38,6 +39,27 @@ export const BlogsAndArticlesDatas = [
   },
 ];
 
+export const WhyChooseUsDatas = [
+  {
+    id: 1,
+    title: "Unmatched Expertise",
+    content:
+      "With decades of experience in geotechnical and soil engineering, our team has the skills and knowledge to tackle complex projects with precision and innovation.",
+  },
+  {
+    id: 2,
+    title: "Customized Solutions",
+    content:
+      "We understand that each project is unique. Our team tailors solutions to meet the specific needs of your site, ensuring safe and effective outcomes.",
+  },
+  {
+    id: 3,
+    title: "Environmental Responsibility",
+    content:
+      "Our approach is grounded in sustainability. We prioritize environmentally responsible practices, minimizing impact and promoting long-term project viability.",
+  },
+];
+
 export const BottomCore = () => {
   return (
     <div className="flex  gap-8 px-32 py-16">
@@ -50,7 +72,7 @@ export const BottomCore = () => {
         </div>
         <div className="flex w-[620px] gap-10 overflow-scroll ">
           {BlogsAndArticlesDatas.map((value) => (
-            <div className="min-w-[280px]">
+            <div className="min-w-[280px]" key={value.id}>
               <BlogsAndArticles
                 bgPics={value.bgpics}
                 content={value.content}
@@ -68,6 +90,15 @@ export const BottomCore = () => {
             Why Choose Us
           </Text>
           <span className="h-[.5px] w-[60%] bg-grey" />
+        </div>
+        <div className="flex flex-col">
+          {WhyChooseUsDatas.map((data) => (
+            <Accordian
+              title={data.title}
+              content={data.content}
+              key={data.id}
+            />
+          ))}
         </div>
       </section>
     </div>
