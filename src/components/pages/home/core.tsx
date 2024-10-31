@@ -5,48 +5,54 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 export const TestingMethods = [
   {
     id: 1,
+    title: "Site Assessment",
     content:
-      "Compaction control of earthworks. A number of fully trained and experienced technicians offer prompt service for any sized project. On site laboratory facilities can be provided.",
+      "Comprehensive evaluations to understand site-specific soil conditions, ensuring safe and cost-effective construction planning.",
     classname:
       "bg-white border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer ",
     usage: "default" as TextUsage,
   },
   {
     id: 2,
+    title: "Soil Testing",
     content:
-      "Level 1 to 3 supervision, quality control of materials and construction procedures and reporting.",
+      "Advanced soil testing services that analyze strength, stability, and composition, providing crucial data for reliable foundations",
     classname:
       "bg-fadding-blue border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
     usage: "click" as TextUsage,
   },
   {
     id: 3,
+    title: "Project Management",
     content:
-      "Material compliance testing includes the Californian Bearing Ratio, Particle Size Distribution and Atterberg Limits.",
+      "Comprehensive project support, from concept through construction, ensuring smooth execution and high standards.",
     classname:
       "bg-white border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer ",
     usage: "default" as TextUsage,
   },
   {
     id: 4,
+    title: "Geotechnical Investigations",
     content:
-      "Other testing includes the 9Kg Dynamic Cone Penetrometer and Emerson Class Number.",
+      "Thorough site investigations for subsurface conditions, enabling accurate design and construction adaptations.",
     classname:
       "bg-fadding-blue border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
     usage: "click" as TextUsage,
   },
   {
     id: 5,
+    title: "Environmental Consulting",
     content:
-      "In conjuction with our sister company, permeability and other material property testing is undertaken.",
+      "Eco-conscious engineering solutions that reduce environmental impact while meeting project goals and regulatory standards",
     classname:
       "bg-white border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
     usage: "default" as TextUsage,
   },
   {
     id: 6,
+    title: "Foundation Engineering",
     content:
-      "Technical support and consultation provided for all matters pertaining to Geotechnical earthworks and pavement materials testing.",
+      "Expert design of foundations tailored to withstand local soil conditions, from urban high-rises to heavy industrial structures.",
     classname:
       "bg-fadding-blue border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
     usage: "click" as TextUsage,
