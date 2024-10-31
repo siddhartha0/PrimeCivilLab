@@ -37,7 +37,7 @@ export const Navbar = memo(() => {
         <img
           src={logo}
           alt="company logo"
-          className="w-52 cursor-pointer"
+          className="w-52 cursor-pointer -mt-7"
           onClick={() => nav("/")}
         />
       </section>
