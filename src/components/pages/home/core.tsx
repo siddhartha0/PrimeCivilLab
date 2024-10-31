@@ -100,9 +100,9 @@ export const Core = () => {
               geotechnical testing. Delivering an unparalleled level of customer
               service and technical integrity.
             </Text>
-            <Button usage="brand" className="w-[50%] z-10">
+            <Button usage="brand" className="w-[50%] z-10" id="gallery-button">
               <Text usage="click" size="body-base-mid">
-                Our Capabilities
+                View More
               </Text>
               <Icon icon="iconamoon:arrow-right-2-duotone" />
             </Button>
@@ -122,7 +122,7 @@ export const Core = () => {
             aggregate and specialised tests. Geolabs primary laboratory is
             located in Ravenhall Victoria.
           </Text>
-          <Button usage="brand" className="w-[40%]">
+          <Button usage="brand" className="w-[40%]" id="blogs-button">
             <Text size="body-base-mid" usage="click">
               See More Blogs
             </Text>
