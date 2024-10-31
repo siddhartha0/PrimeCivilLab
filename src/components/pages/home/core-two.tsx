@@ -40,13 +40,13 @@ export const BlogsAndArticlesDatas = [
 
 export const BottomCore = () => {
   return (
-    <div className="flex flex-col gap-8 px-32 py-16">
-      <section className="flex flex-col gap-8" id="blogs_and_articles">
+    <div className="flex  gap-8 px-32 py-16">
+      <section className="flex  flex-col gap-8" id="blogs_and_articles">
         <div className="flex place-items-center gap-6">
           <Text size="body-lg-mid" secondaryFont>
             Recent New
           </Text>
-          <span className="h-[.5px] w-[40%] bg-grey" />
+          <span className="h-[.5px] w-[70%] bg-grey" />
         </div>
         <div className="flex w-[620px] gap-10 overflow-scroll ">
           {BlogsAndArticlesDatas.map((value) => (
@@ -59,6 +59,15 @@ export const BottomCore = () => {
               />
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="flex w-full flex-col gap-8" id="why_choose_us">
+        <div className="flex place-items-center gap-6">
+          <Text size="body-lg-mid" secondaryFont>
+            Why Choose Us
+          </Text>
+          <span className="h-[.5px] w-[60%] bg-grey" />
         </div>
       </section>
     </div>
