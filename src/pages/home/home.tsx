@@ -1,7 +1,7 @@
 import { LandingPageLayout } from "../../components/common/landingpagelayout";
 import { Banner } from "../../components/pages/home/banner";
 import { Core } from "../../components/pages/home/core";
-import { Membership } from "../../components/pages/home/membership";
+import { BottomCore } from "../../components/pages/home/core-two";
 
 export const Home = () => {
   return (
@@ -11,7 +11,7 @@ export const Home = () => {
         <div className="pt-72">
           <Core />
         </div>
-        <Membership />
+        <BottomCore />
       </div>
     </LandingPageLayout>
   );
