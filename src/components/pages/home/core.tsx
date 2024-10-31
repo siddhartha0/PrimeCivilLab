@@ -1,5 +1,5 @@
 import { Text } from "../../units/Text";
-import bg from "../../../assets/images/core-bg.jpg";
+import bg from "../../../assets/images/core-bg2.jpg";
 import { Button } from "../../units/Button";
 import { Icon } from "@iconify/react/dist/iconify.js";
 export const TestingMethods = [
@@ -77,23 +77,31 @@ export const Core = () => {
           ))}
         </section>
       </section>
-      <section className="flex justify-between gap-14 place-items-center">
+      <section
+        className="flex justify-between gap-14 place-items-center"
+        id="blogs"
+      >
         <div className=" pb-10 px-3 shadow-xl rounded-xl">
           <div
             className="flex px-6 py-14  flex-col bg-cover  bg-center w-[480px] relative gap-8 rounded-xl  "
             style={{ backgroundImage: `url(${bg})` }}
           >
-            <div className="absolute rounded-xl inset-0 bg-fadish-blue opacity-60 "></div>
-            <Text size="heading-lg-default" usage="click" className="z-10">
+            <div className="absolute rounded-xl inset-0 bg-black-4 opacity-60 "></div>
+            <Text
+              size="heading-lg-default"
+              usage="click"
+              className="z-10"
+              secondaryFont
+            >
               Geotechnical Laboratories
             </Text>
-            <Text size="body-base-default" usage="click" className="z-10">
+            <Text size="body-base-default" className="z-10 text-grey">
               The industry leaders in compaction control and associated
               geotechnical testing. Delivering an unparalleled level of customer
               service and technical integrity.
             </Text>
-            <Button usage="brand" className="w-[40%] z-10">
-              <Text usage="click" size="body-base-default">
+            <Button usage="brand" className="w-[50%] z-10">
+              <Text usage="click" size="body-base-mid">
                 Our Capabilities
               </Text>
               <Icon icon="iconamoon:arrow-right-2-duotone" />
@@ -102,7 +110,7 @@ export const Core = () => {
         </div>
 
         <div className="flex flex-col gap-9 w-[575px]">
-          <Text size="body-base-default" usage="brand">
+          <Text size="body-base-default" usage="black4">
             The industry leaders in compaction control and associated
             geotechnical testing. Delivering an unparalleled level of customer
             service and technical integrity. Our Capabilities Geotechnical
@@ -114,9 +122,9 @@ export const Core = () => {
             aggregate and specialised tests. Geolabs primary laboratory is
             located in Ravenhall Victoria.
           </Text>
-          <Button usage="brand" className="w-[20%]">
-            <Text size="body-base-default" usage="click">
-              Contact us
+          <Button usage="brand" className="w-[40%]">
+            <Text size="body-base-mid" usage="click">
+              See More Blogs
             </Text>
             <Icon icon="iconamoon:arrow-right-2-duotone" />
           </Button>
