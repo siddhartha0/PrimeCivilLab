@@ -1,4 +1,4 @@
-import { Text, TextUsage } from "../../units/Text";
+import { Text } from "../../units/Text";
 import bg from "../../../assets/images/core-bg.jpg";
 import { Button } from "../../units/Button";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -8,70 +8,71 @@ export const TestingMethods = [
     title: "Site Assessment",
     content:
       "Comprehensive evaluations to understand site-specific soil conditions, ensuring safe and cost-effective construction planning.",
-    classname:
-      "bg-white border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer ",
-    usage: "default" as TextUsage,
+    icon: "fluent-mdl2:assessment-group-template",
   },
   {
     id: 2,
     title: "Soil Testing",
     content:
       "Advanced soil testing services that analyze strength, stability, and composition, providing crucial data for reliable foundations",
-    classname:
-      "bg-fadding-blue border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
-    usage: "click" as TextUsage,
+    icon: "cuida:test-tube-outline",
   },
   {
     id: 3,
     title: "Project Management",
     content:
       "Comprehensive project support, from concept through construction, ensuring smooth execution and high standards.",
-    classname:
-      "bg-white border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer ",
-    usage: "default" as TextUsage,
+    icon: "carbon:inventory-management",
   },
   {
     id: 4,
     title: "Geotechnical Investigations",
     content:
       "Thorough site investigations for subsurface conditions, enabling accurate design and construction adaptations.",
-    classname:
-      "bg-fadding-blue border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
-    usage: "click" as TextUsage,
+    icon: "hugeicons:investigation",
   },
   {
     id: 5,
     title: "Environmental Consulting",
     content:
       "Eco-conscious engineering solutions that reduce environmental impact while meeting project goals and regulatory standards",
-    classname:
-      "bg-white border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
-    usage: "default" as TextUsage,
+    icon: "tdesign:undertake-environment-protection",
   },
   {
     id: 6,
     title: "Foundation Engineering",
     content:
       "Expert design of foundations tailored to withstand local soil conditions, from urban high-rises to heavy industrial structures.",
-    classname:
-      "bg-fadding-blue border border-black-600 px-10 py-16 text-center hover:bg-fade-blue hover:cursor-pointer",
-    usage: "click" as TextUsage,
+    icon: "carbon:ibm-engineering-workflow-mgmt",
   },
 ];
 
 export const Core = () => {
   return (
     <div className="flex flex-col bg-white px-36 py-16 gap-24">
-      <section className="flex flex-col gap-4 text-center">
-        <Text size="heading-base-mid" usage="black3" secondaryFont>
-          Our Services
-        </Text>
-        <section className="grid grid-cols-3">
+      <section className="flex flex-col gap-10 " id="services">
+        <div
+          className="flex text-center place-items-center justify-center gap-6"
+          id="service-header"
+        >
+          <div className="h-[.5px] w-[30%] bg-grey" />
+          <Text size="heading-base-mid" usage="black3" secondaryFont>
+            Our Services
+          </Text>
+          <div className="h-[.5px] w-[30%] bg-grey" />
+        </div>
+        <section className="grid grid-cols-3 gap-6">
           {TestingMethods.map((method) => (
-            <div key={method.id} className={method.classname}>
-              <Text usage={method.usage} size="body-base-default">
-                {method.content}
-              </Text>
+            <div key={method.id} className="flex flex-col gap-4">
+              <Icon icon={method.icon} fontSize={24} color="#fa9a00" />
+              <section className="flex flex-col gap-2">
+                <Text size="body-base-rare" secondaryFont>
+                  {method.title}
+                </Text>
+                <Text size="body-base-default" usage="black4">
+                  {method.content}
+                </Text>
+              </section>
             </div>
           ))}
         </section>
