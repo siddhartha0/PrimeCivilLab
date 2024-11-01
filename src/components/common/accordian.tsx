@@ -22,6 +22,7 @@ export const Accordion = ({
     <div className="  flex flex-col gap-2" id="parent">
       <motion.header
         className=" flex justify-between items-center cursor-pointer bg-background"
+        whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
         initial={false}
         id="title_and_icon"
@@ -51,14 +52,14 @@ export const Accordion = ({
         {isOpen && (
           <motion.div
             initial="collapsed"
-            animate="open"
-            exit="collapsed"
             id="content_div"
             variants={{
               open: { opacity: 1, height: "auto" },
               collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+            animate={{ scale: 1, opacity: 1, height: "auto" }}
+            exit={{ scale: 0.8, opacity: 0, height: 0 }}
           >
             <Text size="body-base-default" id="content" usage="black4">
               {content}
