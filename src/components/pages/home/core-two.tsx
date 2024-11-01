@@ -45,18 +45,21 @@ export const WhyChooseUsDatas = [
     title: "Unmatched Expertise",
     content:
       "With decades of experience in geotechnical and soil engineering, our team has the skills and knowledge to tackle complex projects with precision and innovation.",
+    showContent: true,
   },
   {
     id: 2,
     title: "Customized Solutions",
     content:
       "We understand that each project is unique. Our team tailors solutions to meet the specific needs of your site, ensuring safe and effective outcomes.",
+    showContent: false,
   },
   {
     id: 3,
     title: "Environmental Responsibility",
     content:
       "Our approach is grounded in sustainability. We prioritize environmentally responsible practices, minimizing impact and promoting long-term project viability.",
+    showContent: false,
   },
 ];
 
@@ -91,12 +94,13 @@ export const BottomCore = () => {
           </Text>
           <span className="h-[.5px] w-[60%] bg-grey" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-6 justify-center">
           {WhyChooseUsDatas.map((data) => (
             <Accordian
               title={data.title}
               content={data.content}
               key={data.id}
+              originalState={data.showContent}
             />
           ))}
         </div>
