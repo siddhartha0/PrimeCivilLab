@@ -3,6 +3,7 @@ import { Text } from "../units";
 import logo from "../../assets/images/logo.png";
 import { NavbarData } from "../../utils/constants/NavbarData";
 import { memo, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export const Navbar = memo(() => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,14 +44,19 @@ export const Navbar = memo(() => {
       </section>
       <section className="flex place-items-center gap-14">
         {NavbarData.map((header) => (
-          <Link to={header.path} key={header.id}>
+          <Link to={header.path} key={header.id} className="group">
             <Text
               size="body-sm-default"
-              className="capitalize hover:text-brand hover:border-b  p-1"
+              className="capitalize hover:text-brand p-1"
               usage="black4"
             >
               {header.title}
             </Text>
+
+            <motion.div
+              className="h-[2px] w-full bg-brand origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              id="bottom-border"
+            />
           </Link>
         ))}
       </section>
