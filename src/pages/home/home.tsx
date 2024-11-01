@@ -1,7 +1,8 @@
 import { LandingPageLayout } from "../../components/common/landingpagelayout";
 import { Banner } from "../../components/pages/home/banner";
 import { Core } from "../../components/pages/home/core";
-import { BottomCore } from "../../components/pages/home/core-two";
+import { CoreThree } from "../../components/pages/home/core-three";
+import { CoreTwo } from "../../components/pages/home/core-two";
 
 export const Home = () => {
   return (
@@ -11,7 +12,9 @@ export const Home = () => {
         <div className="pt-72">
           <Core />
         </div>
-        <BottomCore />
+        <CoreTwo />
+
+        <CoreThree />
       </div>
     </LandingPageLayout>
   );

@@ -47,7 +47,7 @@ export const Navbar = memo(() => {
           <Link to={header.path} key={header.id} className="group">
             <Text
               size="body-sm-default"
-              className="capitalize hover:text-brand p-1"
+              className="capitalize hover:scale-x-100 transition-transform duration-300 hover:text-brand p-1"
               usage="black4"
             >
               {header.title}

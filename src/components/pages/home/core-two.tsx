@@ -3,7 +3,7 @@ import { BlogsAndArticles } from "./blogs-and-articles";
 import { Accordion } from "../../common/accordian";
 import { BlogsAndArticlesDatas, WhyChooseUsDatas } from "../../../utils/Mocks";
 
-export const BottomCore = () => {
+export const CoreTwo = () => {
   return (
     <div className="flex  gap-8 px-32 py-16" id="parent_div">
       <section className="flex  flex-col gap-8" id="blogs_and_articles">
