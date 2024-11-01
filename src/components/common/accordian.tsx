@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Text } from "../units";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 interface AccordionProps {
   title: string;
@@ -23,14 +24,17 @@ export const Accordion = ({
         className="flex justify-between items-center  cursor-pointer bg-background "
         onClick={() => setIsOpen(!isOpen)}
         initial={false}
-        animate={{
-          // background: isOpen ? "#fa9a00" : "#fff",
-          border: isOpen ? "border 2px" : "",
-        }}
+        animate={{}}
       >
         <Text secondaryFont size="body-md-mid" usage="black">
           {title}
         </Text>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Icon icon="iconamoon:arrow-down-2" />
+        </motion.div>
       </motion.header>
       <AnimatePresence initial={false}>
         {isOpen && (

@@ -3,6 +3,7 @@ import { BlogsAndArticles } from "./blogs-and-articles";
 import bgone from "../../../assets/images/blog1.jpg";
 import bgtwo from "../../../assets/images/bg-office-black.jpg";
 import { Accordion } from "../../common/accordian";
+import { div } from "framer-motion/client";
 
 export const BlogsAndArticlesDatas = [
   {
@@ -102,14 +103,15 @@ export const BottomCore = () => {
           </Text>
           <span className="h-[.5px] w-[60%] bg-grey" />
         </div>
-        <div className="flex flex-col gap-6  h-[400px]  overflow-scroll">
+        <div className="flex flex-col gap-6 h-[400px]  overflow-scroll">
           {WhyChooseUsDatas.map((data) => (
-            <Accordion
-              title={data.title}
-              content={data.content}
-              key={data.id}
-              originalState={data.showContent}
-            />
+            <div key={data.id} className="border-b border-grey pb-4">
+              <Accordion
+                title={data.title}
+                content={data.content}
+                originalState={data.showContent}
+              />
+            </div>
           ))}
         </div>
       </section>
