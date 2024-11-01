@@ -2,7 +2,7 @@ import { Text } from "../../units";
 import { BlogsAndArticles } from "./blogs-and-articles";
 import bgone from "../../../assets/images/blog1.jpg";
 import bgtwo from "../../../assets/images/bg-office-black.jpg";
-import { Accordian } from "../../common/accordian";
+import { Accordion } from "../../common/accordian";
 
 export const BlogsAndArticlesDatas = [
   {
@@ -96,7 +96,7 @@ export const BottomCore = () => {
         </div>
         <div className="flex flex-col gap-6 justify-center">
           {WhyChooseUsDatas.map((data) => (
-            <Accordian
+            <Accordion
               title={data.title}
               content={data.content}
               key={data.id}

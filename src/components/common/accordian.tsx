@@ -1,41 +1,52 @@
+"use client";
+
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Text } from "../units";
 
-interface propTypes {
+interface AccordionProps {
   title: string;
   content: string;
   originalState?: boolean;
 }
 
-export const Accordian = ({
+export const Accordion = ({
   title,
   content,
   originalState = false,
-}: propTypes) => {
+}: AccordionProps) => {
   const [isOpen, setIsOpen] = useState(originalState);
+
   return (
-    <div className="flex flex-col ">
-      <Text
-        size="body-lg-mid"
-        className="cursor-pointer"
-        secondaryFont
-        onClick={() => setIsOpen((prev) => !prev)}
-        aria-expanded={isOpen}
+    <div className="  flex flex-col gap-2">
+      <motion.header
+        className="flex justify-between items-center  cursor-pointer bg-background "
+        onClick={() => setIsOpen(!isOpen)}
+        initial={false}
+        animate={{
+          backgroundColor: isOpen ? "var(--background)" : "var(--muted)",
+        }}
       >
-        {title}
-      </Text>
-      {isOpen && (
-        <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            isOpen ? "max-h-96 opacity-100 py-2" : "max-h-0 opacity-0"
-          }`}
-          style={{ transitionProperty: "max-height, opacity, padding" }}
-        >
-          <Text size="body-base-default" usage="black4">
-            {content}
-          </Text>
-        </div>
-      )}
+        <Text secondaryFont size="body-md-mid">
+          {title}
+        </Text>
+      </motion.header>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+          >
+            <Text size="body-base-default">{content}</Text>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
