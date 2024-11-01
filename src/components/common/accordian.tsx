@@ -40,7 +40,7 @@ export const Accordion = ({
       </motion.header>
 
       <motion.div
-        className=" h-[.1px] w-full bg-brand origin-left"
+        className=" h-[.2px] w-full bg-brand origin-left"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: isOpen ? 1 : 0 }}
         transition={{ duration: 0.3 }}
