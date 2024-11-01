@@ -21,14 +21,16 @@ export const Accordion = ({
   return (
     <div className="  flex flex-col gap-2">
       <motion.header
-        className="flex justify-between items-center  cursor-pointer bg-background "
+        className=" flex justify-between items-center cursor-pointer bg-background"
         onClick={() => setIsOpen(!isOpen)}
         initial={false}
-        animate={{}}
       >
+        {/* Your header content */}
+
         <Text secondaryFont size="body-md-mid" usage="black">
           {title}
         </Text>
+
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
@@ -36,6 +38,14 @@ export const Accordion = ({
           <Icon icon="iconamoon:arrow-down-2" />
         </motion.div>
       </motion.header>
+
+      <motion.div
+        className=" h-[.1px] w-full bg-brand origin-left"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: isOpen ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      />
+
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
