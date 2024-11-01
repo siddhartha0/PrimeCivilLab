@@ -19,23 +19,23 @@ export const Accordion = ({
   const [isOpen, setIsOpen] = useState(originalState);
 
   return (
-    <div className="  flex flex-col gap-2">
+    <div className="  flex flex-col gap-2" id="parent">
       <motion.header
         className=" flex justify-between items-center cursor-pointer bg-background"
         onClick={() => setIsOpen(!isOpen)}
         initial={false}
+        id="title_and_icon"
       >
-        {/* Your header content */}
-
-        <Text secondaryFont size="body-md-mid" usage="black">
+        <Text secondaryFont size="body-md-mid" usage="black" id="title">
           {title}
         </Text>
 
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
+          id="animate_icon"
         >
-          <Icon icon="iconamoon:arrow-down-2" />
+          <Icon icon="iconamoon:arrow-down-2" id="icon" />
         </motion.div>
       </motion.header>
 
@@ -44,6 +44,7 @@ export const Accordion = ({
         initial={{ scaleX: 0 }}
         animate={{ scaleX: isOpen ? 1 : 0 }}
         transition={{ duration: 0.3 }}
+        id="bottom-border"
       />
 
       <AnimatePresence initial={false}>
@@ -52,13 +53,14 @@ export const Accordion = ({
             initial="collapsed"
             animate="open"
             exit="collapsed"
+            id="content_div"
             variants={{
               open: { opacity: 1, height: "auto" },
               collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <Text size="body-base-default" usage="black4">
+            <Text size="body-base-default" id="content" usage="black4">
               {content}
             </Text>
           </motion.div>

@@ -3,7 +3,6 @@ import { BlogsAndArticles } from "./blogs-and-articles";
 import bgone from "../../../assets/images/blog1.jpg";
 import bgtwo from "../../../assets/images/bg-office-black.jpg";
 import { Accordion } from "../../common/accordian";
-import { div } from "framer-motion/client";
 
 export const BlogsAndArticlesDatas = [
   {
