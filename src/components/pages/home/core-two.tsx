@@ -70,6 +70,13 @@ export const WhyChooseUsDatas = [
       "Our team stays at the forefront of engineering advancements, incorporating the latest techniques and innovations to deliver high-quality results.",
     showContent: false,
   },
+  {
+    id: 5,
+    showContent: false,
+    title: "Comprehensive Support",
+    content:
+      "Beyond project completion, we provide ongoing support and guidance, helping you maintain and adapt infrastructure to changing needs and conditions.",
+  },
 ];
 
 export const BottomCore = () => {
