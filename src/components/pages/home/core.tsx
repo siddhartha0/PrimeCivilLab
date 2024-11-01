@@ -2,50 +2,7 @@ import { Text } from "../../units/Text";
 import bg from "../../../assets/images/core-bg2.jpg";
 import { Button } from "../../units/Button";
 import { Icon } from "@iconify/react/dist/iconify.js";
-export const TestingMethods = [
-  {
-    id: 1,
-    title: "Site Assessment",
-    content:
-      "Comprehensive evaluations to understand site-specific soil conditions, ensuring safe and cost-effective construction planning.",
-    icon: "fluent-mdl2:assessment-group-template",
-  },
-  {
-    id: 2,
-    title: "Soil Testing",
-    content:
-      "Advanced soil testing services that analyze strength, stability, and composition, providing crucial data for reliable foundations",
-    icon: "cuida:test-tube-outline",
-  },
-  {
-    id: 3,
-    title: "Project Management",
-    content:
-      "Comprehensive project support, from concept through construction, ensuring smooth execution and high standards.",
-    icon: "carbon:inventory-management",
-  },
-  {
-    id: 4,
-    title: "Geotechnical Investigations",
-    content:
-      "Thorough site investigations for subsurface conditions, enabling accurate design and construction adaptations.",
-    icon: "hugeicons:investigation",
-  },
-  {
-    id: 5,
-    title: "Environmental Consulting",
-    content:
-      "Eco-conscious engineering solutions that reduce environmental impact while meeting project goals and regulatory standards",
-    icon: "tdesign:undertake-environment-protection",
-  },
-  {
-    id: 6,
-    title: "Foundation Engineering",
-    content:
-      "Expert design of foundations tailored to withstand local soil conditions, from urban high-rises to heavy industrial structures.",
-    icon: "carbon:ibm-engineering-workflow-mgmt",
-  },
-];
+import { Services } from "../../../utils/Mocks";
 
 export const Core = () => {
   return (
@@ -53,16 +10,21 @@ export const Core = () => {
       <section className="flex flex-col gap-10 " id="services">
         <div
           className="flex text-center place-items-center justify-center gap-6"
-          id="service-header"
+          id="service-header-div"
         >
-          <div className="h-[.5px] w-[30%] bg-grey" />
-          <Text size="heading-base-mid" usage="black3" secondaryFont>
+          <div className="h-[.5px] w-[30%] bg-grey" id="border" />
+          <Text
+            size="heading-base-mid"
+            usage="black3"
+            secondaryFont
+            id="service-header"
+          >
             Our Services
           </Text>
-          <div className="h-[.5px] w-[30%] bg-grey" />
+          <div className="h-[.5px] w-[30%] bg-grey" id="border" />
         </div>
-        <section className="grid grid-cols-3 gap-6">
-          {TestingMethods.map((method) => (
+        <section className="grid grid-cols-3 gap-6" id="services-content-divs">
+          {Services.map((method) => (
             <div key={method.id} className="flex flex-col gap-4 pb-4">
               <Icon icon={method.icon} fontSize={24} color="#fa9a00" />
               <section className="flex flex-col gap-2">
@@ -77,6 +39,7 @@ export const Core = () => {
           ))}
         </section>
       </section>
+
       <section
         className="flex justify-between gap-14 place-items-center"
         id="blogs"
