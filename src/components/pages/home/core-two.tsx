@@ -61,6 +61,14 @@ export const WhyChooseUsDatas = [
       "Our approach is grounded in sustainability. We prioritize environmentally responsible practices, minimizing impact and promoting long-term project viability.",
     showContent: false,
   },
+  {
+    id: 4,
+
+    title: "Continuous Innovation",
+    content:
+      "Our team stays at the forefront of engineering advancements, incorporating the latest techniques and innovations to deliver high-quality results.",
+    showContent: false,
+  },
 ];
 
 export const BottomCore = () => {
@@ -94,7 +102,7 @@ export const BottomCore = () => {
           </Text>
           <span className="h-[.5px] w-[60%] bg-grey" />
         </div>
-        <div className="flex flex-col gap-6 justify-center">
+        <div className="flex flex-col gap-6  h-[400px]  overflow-scroll">
           {WhyChooseUsDatas.map((data) => (
             <Accordion
               title={data.title}

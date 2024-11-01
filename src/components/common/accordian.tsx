@@ -24,10 +24,11 @@ export const Accordion = ({
         onClick={() => setIsOpen(!isOpen)}
         initial={false}
         animate={{
-          backgroundColor: isOpen ? "var(--background)" : "var(--muted)",
+          // background: isOpen ? "#fa9a00" : "#fff",
+          border: isOpen ? "border 2px" : "",
         }}
       >
-        <Text secondaryFont size="body-md-mid">
+        <Text secondaryFont size="body-md-mid" usage="black">
           {title}
         </Text>
       </motion.header>
@@ -43,7 +44,9 @@ export const Accordion = ({
             }}
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <Text size="body-base-default">{content}</Text>
+            <Text size="body-base-default" usage="black4">
+              {content}
+            </Text>
           </motion.div>
         )}
       </AnimatePresence>
