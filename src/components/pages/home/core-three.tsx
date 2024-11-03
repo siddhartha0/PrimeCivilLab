@@ -58,12 +58,22 @@ export const CoreThree = () => {
                 backgroundRepeat: "no-repeat", // Ensures the image doesn't repeat
               }}
             >
-              <div className="absolute inset-0 bg-black-2 bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 ease-in-out flex z-30 justify-center items-center">
+              <div className="absolute flex-col inset-0 bg-black-2 bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 ease-in-out flex z-30 justify-center">
+                <Text
+                  className="opacity-0 group-hover:opacity-100  text-white font-semibold px-4 py-2 rounded transition duration-300 ease-in-out"
+                  size="body-base-default"
+                  secondaryFont
+                >
+                  {project.category}
+                </Text>
+                <Text className="opacity-0 group-hover:opacity-100  text-white font-semibold px-4 py-2 rounded transition duration-300 ease-in-out">
+                  {project.title}
+                </Text>
                 <Button
                   usage="brand"
-                  className="opacity-0 group-hover:opacity-100  text-white font-semibold px-4 py-2 rounded transition duration-300 ease-in-out"
+                  className="opacity-0 group-hover:opacity-100 mt-7  text-white font-semibold px-4 py-2 rounded transition duration-300 ease-in-out"
                 >
-                  Read More
+                  View
                 </Button>
               </div>
             </section>
