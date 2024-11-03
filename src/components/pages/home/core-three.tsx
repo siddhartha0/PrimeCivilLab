@@ -17,11 +17,11 @@ export const CoreThree = () => {
         className="flex place-items-center gap-7  w-full justify-center"
         id="project-header-div"
       >
-        <span className="h-[.5px] w-[30%] bg-grey" id="border" />
+        <span className="h-[.5px] w-[30%] bg-fadish-grey" id="border" />
         <Text id="project-header" usage="click">
           Our Projects
         </Text>
-        <span className="h-[.5px] w-[30%] bg-grey" id="border" />
+        <span className="h-[.5px] w-[30%] bg-fadish-grey" id="border" />
       </section>
 
       <section className="flex place-items-center justify-center gap-6  ">
@@ -34,7 +34,7 @@ export const CoreThree = () => {
         </div>
 
         <div className="flex flex-col gap-1 group/more">
-          <Link to="" className=" relative">
+          <Link to="" className=" relative text-fadish-grey">
             More
           </Link>
           <motion.div

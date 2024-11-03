@@ -26,7 +26,7 @@ export const Navbar = memo(() => {
 
   return (
     <div
-      className={`flex p-6 justify-between place-items-center sticky animate-clip-path-reveal   top-0 z-20 ${
+      className={`flex p-6 justify-between place-items-center sticky animate-clip-path-reveal   top-0 z-50 ${
         isScrolled ? "bg-white " : ""
       }`}
       style={{
