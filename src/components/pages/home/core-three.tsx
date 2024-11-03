@@ -33,6 +33,8 @@ export const CoreThree = () => {
           />
         </div>
       </section>
+
+      <section id="project-gallery-view"></section>
     </div>
   );
 };

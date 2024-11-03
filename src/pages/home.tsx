@@ -13,7 +13,6 @@ export const Home = () => {
           <Core />
         </div>
         <CoreTwo />
-
         <CoreThree />
       </div>
     </LandingPageLayout>
