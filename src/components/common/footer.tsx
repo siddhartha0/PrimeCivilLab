@@ -48,7 +48,28 @@ export const Footer = () => {
             ))}
           </section>
         </div>
+
+        <div id="office" className="flex flex-col gap-4 py-2">
+          <section className="flex place-items-center gap-4">
+            <Text usage="click" secondaryFont>
+              Office
+            </Text>
+            <div className="w-full h-[.1px] bg-black-2" />
+          </section>
+          <section className="grid grid-cols-2 gap-4 py-6">
+            {FooterInformationData.map((info) => (
+              <div
+                key={info.id}
+                className="flex place-items-center gap-2 text-fadish-white capitalize"
+              >
+                <Icon icon="weui:arrow-filled" />
+                <Link to={info.path}>{info.title}</Link>
+              </div>
+            ))}
+          </section>
+        </div>
       </section>
+
       <section className="flex w-full z-20  place-content-center ">
         <Text size="body-base-default" usage="info-primary" className="pt-2">
           © 2024 Prime Civil Lab. All Rights Reserved.
