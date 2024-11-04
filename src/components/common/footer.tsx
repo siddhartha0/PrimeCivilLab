@@ -4,9 +4,9 @@ import { Icon } from "@iconify/react";
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col bg-black-700 justify-around  py-10 px-36 gap-20 bg-fadish-grey relative">
+    <div className="flex flex-col bg-black-700 justify-around  py-10 px-36 gap-20 bg-black-3 relative">
       <div
-        className="w-full h-36 bg-black absolute bottom-0 left-0 "
+        className="w-full h-36 bg-black-2 absolute bottom-0 left-0 "
         style={{
           clipPath:
             "polygon(0 36%, 40% 35%, 42% 17%, 100% 17%, 100% 100%, 0 100%)",
@@ -21,9 +21,9 @@ export const Footer = () => {
             complex terrains. Committed to innovation and precision.
           </p>
           <section className="flex place-items-center gap-3" id="icon">
-            <Icon icon="lineicons:facebook" color="#cccccc" />
-            <Icon icon="mdi:linkedin" color="#cccccc" />
-            <Icon icon="ic:baseline-tiktok" color="#cccccc" />
+            <Icon icon="lineicons:facebook" color="#ccc" />
+            <Icon icon="mdi:linkedin" color="#ccc" />
+            <Icon icon="ic:baseline-tiktok" color="#ccc" />
           </section>
         </div>
 
