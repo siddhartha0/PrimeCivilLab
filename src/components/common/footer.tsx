@@ -4,7 +4,8 @@ import { Icon } from "@iconify/react";
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col bg-black-700 justify-around  py-10 px-36 gap-20 bg-fadish-grey">
+    <div className="flex flex-col bg-black-700 justify-around  py-10 px-36 gap-20 bg-fadish-grey relative">
+      <div className=" w-96 h-10 absolute top-0 left-0 rounded-tr-3xl border-r-[10px] border-white" />
       <section className="flex gap-10  ">
         {FooterData.map((footer) => (
           <section key={footer.id} className="flex flex-col w-[275px] gap-8">
