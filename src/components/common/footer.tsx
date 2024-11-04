@@ -2,39 +2,7 @@ import { Link } from "react-router-dom";
 import companylogo from "../../assets/images/logo.png";
 import { Text } from "../units";
 import { Icon } from "@iconify/react";
-
-export const FooterInformationData = [
-  {
-    id: 1,
-    title: "contact us",
-    path: "",
-  },
-  {
-    id: 2,
-    title: "projects",
-    path: "",
-  },
-  {
-    id: 3,
-    title: "our services",
-    path: "",
-  },
-  {
-    id: 4,
-    title: "About us",
-    path: "",
-  },
-  {
-    id: 5,
-    title: "gallery",
-    path: "",
-  },
-  {
-    id: 6,
-    title: "blogs & articles",
-    path: "",
-  },
-];
+import { FooterInformationData } from "../../utils/Mocks";
 
 export const Footer = () => {
   return (
@@ -81,44 +49,6 @@ export const Footer = () => {
           </section>
         </div>
       </section>
-      {/* <section className="flex gap-10  ">
-        {FooterData.map((footer) => (
-          <section key={footer.id} className="flex flex-col w-[275px] gap-8">
-            <Text
-              usage="click"
-              size="heading-base-default"
-              className="capitalize"
-            >
-              {footer.title}
-            </Text>
-            <section className={footer.classname ?? `flex flex-col gap-2`}>
-              {footer?.children?.map((child) => (
-                <div
-                  className={
-                    child.classname ?? "flex place-items-center  gap-2 "
-                  }
-                  key={child.id}
-                >
-                  {child.icon && (
-                    <Icon
-                      icon={child.icon}
-                      fontSize={24}
-                      className="text-dark-blue"
-                    />
-                  )}
-                  <Text
-                    size={child.size}
-                    usage={child.usage}
-                    className="capitalize"
-                  >
-                    {child.title}
-                  </Text>
-                </div>
-              ))}
-            </section>
-          </section>
-        ))}
-      </section> */}
       <section className="flex w-full z-20  place-content-center ">
         <Text size="body-base-default" usage="info-primary" className="pt-2">
           © 2024 Prime Civil Lab. All Rights Reserved.
