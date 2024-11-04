@@ -13,18 +13,22 @@ export const Footer = () => {
         }}
       />
       <section className="grid grid-cols-3 gap-10">
-        <div className="flex flex-col gap-4">
-          <img src={companylogo} alt="" className="w-48" />
-          <p className="text-fadish-white">
+        <div className="flex flex-col gap-4" id="logo-content-icon">
+          <img src={companylogo} alt="logo" id="logo" className="w-48" />
+          <p className="text-fadish-white" id="content">
             Our expertise spans soil analysis, foundation engineering, and
             ground improvement, helping our clients build with confidence in
             complex terrains. Committed to innovation and precision.
           </p>
-          <section className="flex place-items-center gap-3">
+          <section className="flex place-items-center gap-3" id="icon">
             <Icon icon="lineicons:facebook" color="#cccccc" />
             <Icon icon="mdi:linkedin" color="#cccccc" />
             <Icon icon="ic:baseline-tiktok" color="#cccccc" />
           </section>
+        </div>
+
+        <div id="" className="flex flex-col gap-4">
+          <p></p>
         </div>
       </section>
       {/* <section className="flex gap-10  ">
