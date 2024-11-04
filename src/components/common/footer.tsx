@@ -5,7 +5,15 @@ import { Icon } from "@iconify/react";
 export const Footer = () => {
   return (
     <div className="flex flex-col bg-black-700 justify-around  py-10 px-36 gap-20 bg-fadish-grey relative">
-      <div className=" w-96 h-10 absolute top-0 left-0 rounded-tr-3xl border-r-[10px] border-white" />
+      {/* <div className=" w-96 h-10 absolute top-0 left-0 rounded-tr-3xl border-r-[10px] border-white" /> */}
+      <div
+        className="w-full h-14 bg-black absolute bottom-0 left-0"
+        style={{
+          transform: "rotate3d(1, 2, 3, 180deg);",
+          clipPath:
+            "polygon(0% 0%, 100% 0%, 100% 88%, 80% 90%, 32% 88%, 31% 100%, 0 100%)",
+        }}
+      ></div>
       <section className="flex gap-10  ">
         {FooterData.map((footer) => (
           <section key={footer.id} className="flex flex-col w-[275px] gap-8">

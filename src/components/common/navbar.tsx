@@ -48,8 +48,6 @@ export const Navbar = memo(() => {
             <Text
               size="body-sm-mid"
               className="capitalize hover:scale-x-100 transition-transform duration-300 hover:text-brand p-1 text-fadish-grey"
-
-              // usage="black"
             >
               {header.title}
             </Text>
