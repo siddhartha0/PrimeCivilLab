@@ -50,16 +50,10 @@ export const Footer = () => {
           </section>
         ))}
       </section>
-      <section className="flex justify-between z-20 ">
-        <Text size="body-base-default" usage="info-primary" className="pt-7">
-          © 2024 Geotechnical Laboratories. All Rights Reserved.
+      <section className="flex w-full z-20  place-content-center ">
+        <Text size="body-base-default" usage="info-primary" className="pt-2">
+          © 2024 Prime Civil Lab. All Rights Reserved.
         </Text>
-        <div className="flex place-items-center gap-5">
-          <Icon icon="mage:facebook" className="text-dark-blue" />
-          <div className="bg-white p-4">
-            <Icon icon="iconamoon:arrow-up-2" className="text-black-700" />
-          </div>
-        </div>
       </section>
     </div>
   );
