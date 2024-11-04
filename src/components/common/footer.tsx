@@ -1,6 +1,40 @@
+import { Link } from "react-router-dom";
 import companylogo from "../../assets/images/logo.png";
 import { Text } from "../units";
 import { Icon } from "@iconify/react";
+
+export const FooterInformationData = [
+  {
+    id: 1,
+    title: "contact us",
+    path: "",
+  },
+  {
+    id: 2,
+    title: "projects",
+    path: "",
+  },
+  {
+    id: 3,
+    title: "our services",
+    path: "",
+  },
+  {
+    id: 4,
+    title: "About us",
+    path: "",
+  },
+  {
+    id: 5,
+    title: "gallery",
+    path: "",
+  },
+  {
+    id: 6,
+    title: "blogs & articles",
+    path: "",
+  },
+];
 
 export const Footer = () => {
   return (
@@ -27,8 +61,24 @@ export const Footer = () => {
           </section>
         </div>
 
-        <div id="" className="flex flex-col gap-4">
-          <p></p>
+        <div id="information" className="flex flex-col gap-4 py-2">
+          <section className="flex place-items-center gap-4">
+            <Text usage="click" secondaryFont>
+              Information
+            </Text>
+            <div className="w-full h-[.1px] bg-black-2" />
+          </section>
+          <section className="grid grid-cols-2 gap-4 py-6">
+            {FooterInformationData.map((info) => (
+              <div
+                key={info.id}
+                className="flex place-items-center gap-2 text-fadish-white capitalize"
+              >
+                <Icon icon="weui:arrow-filled" />
+                <Link to={info.path}>{info.title}</Link>
+              </div>
+            ))}
+          </section>
         </div>
       </section>
       {/* <section className="flex gap-10  ">
