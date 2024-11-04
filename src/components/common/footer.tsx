@@ -6,12 +6,10 @@ export const Footer = () => {
   return (
     <div className="flex flex-col bg-black-700 justify-around  py-10 px-36 gap-20 bg-fadish-grey relative">
       <div
-        className="w-full h-14 bg-black absolute bottom-0 left-0"
+        className="w-full h-36 bg-black absolute bottom-0 left-0 "
         style={{
-          transform: "flip(360deg)",
-          imageOrientation: "flip",
           clipPath:
-            "polygon(0% 0%, 100% 0%, 100% 88%, 80% 90%, 32% 88%, 31% 100%, 0 100%)",
+            "polygon(0 36%, 40% 35%, 42% 17%, 100% 17%, 100% 100%, 0 100%)",
         }}
       />
       <section className="flex gap-10  ">
@@ -52,8 +50,8 @@ export const Footer = () => {
           </section>
         ))}
       </section>
-      <section className="flex justify-between">
-        <Text size="body-base-default" usage="info-primary">
+      <section className="flex justify-between z-20 ">
+        <Text size="body-base-default" usage="info-primary" className="pt-7">
           © 2024 Geotechnical Laboratories. All Rights Reserved.
         </Text>
         <div className="flex place-items-center gap-5">
