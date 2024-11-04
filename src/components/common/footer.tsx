@@ -3,6 +3,7 @@ import companylogo from "../../assets/images/logo.png";
 import { Text } from "../units";
 import { Icon } from "@iconify/react";
 import { FooterInformationData } from "../../utils/Mocks";
+import { OfficeData } from "../../utils/Mocks/OfficeData";
 
 export const Footer = () => {
   return (
@@ -56,14 +57,16 @@ export const Footer = () => {
             </Text>
             <div className="w-full h-[.1px] bg-black-2" />
           </section>
-          <section className="grid grid-cols-2 gap-4 py-6">
-            {FooterInformationData.map((info) => (
+          <section className="flex flex-col  gap-4 py-6">
+            {OfficeData.map((info) => (
               <div
                 key={info.id}
                 className="flex place-items-center gap-2 text-fadish-white capitalize"
               >
-                <Icon icon="weui:arrow-filled" />
-                <Link to={info.path}>{info.title}</Link>
+                <Icon icon={info?.icon} className="text-brand" />
+                <Text className="text-fadish-white" size="body-base-default">
+                  {info.title}
+                </Text>
               </div>
             ))}
           </section>
