@@ -1,4 +1,4 @@
-import { FooterData } from "../../utils/constants/FooterData";
+import companylogo from "../../assets/images/logo.png";
 import { Text } from "../units";
 import { Icon } from "@iconify/react";
 
@@ -12,7 +12,22 @@ export const Footer = () => {
             "polygon(0 36%, 40% 35%, 42% 17%, 100% 17%, 100% 100%, 0 100%)",
         }}
       />
-      <section className="flex gap-10  ">
+      <section className="grid grid-cols-3 gap-10">
+        <div className="flex flex-col gap-4">
+          <img src={companylogo} alt="" className="w-48" />
+          <p className="text-fadish-white">
+            Our expertise spans soil analysis, foundation engineering, and
+            ground improvement, helping our clients build with confidence in
+            complex terrains. Committed to innovation and precision.
+          </p>
+          <section className="flex place-items-center gap-3">
+            <Icon icon="lineicons:facebook" color="#cccccc" />
+            <Icon icon="mdi:linkedin" color="#cccccc" />
+            <Icon icon="ic:baseline-tiktok" color="#cccccc" />
+          </section>
+        </div>
+      </section>
+      {/* <section className="flex gap-10  ">
         {FooterData.map((footer) => (
           <section key={footer.id} className="flex flex-col w-[275px] gap-8">
             <Text
@@ -49,7 +64,7 @@ export const Footer = () => {
             </section>
           </section>
         ))}
-      </section>
+      </section> */}
       <section className="flex w-full z-20  place-content-center ">
         <Text size="body-base-default" usage="info-primary" className="pt-2">
           © 2024 Prime Civil Lab. All Rights Reserved.
