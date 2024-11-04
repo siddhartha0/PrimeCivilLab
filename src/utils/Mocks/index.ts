@@ -3,3 +3,4 @@ export { WhyChooseUsDatas } from "./WhyChooseUs";
 export { Services } from "./Services";
 export { Projects } from "./Projects";
 export { FooterInformationData } from "./FooterInformation";
+export { OfficeData } from "./OfficeData";

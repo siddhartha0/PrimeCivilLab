@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import companylogo from "../../assets/images/logo.png";
 import { Text } from "../units";
 import { Icon } from "@iconify/react";
-import { FooterInformationData } from "../../utils/Mocks";
-import { OfficeData } from "../../utils/Mocks/OfficeData";
+import { FooterInformationData, OfficeData } from "../../utils/Mocks";
 
 export const Footer = () => {
   return (
