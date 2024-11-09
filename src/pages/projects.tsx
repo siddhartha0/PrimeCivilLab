@@ -3,6 +3,7 @@ import bg from "../assets/images/slider6.jpg";
 import { Text } from "../components/units";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { Projects as ProjectData } from "../utils/Mocks";
 import { Link } from "react-router-dom";
 
 export const ProjectsLayoutData = [
@@ -54,16 +55,16 @@ export const Projects = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <AnimatePresence>
-              {Projects.map((project) => (
+              {ProjectData.map((project, i) => (
                 <motion.div
-                  key={project.id}
+                  key={i}
                   layout
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className="group relative overflow-hidden"
                 >
-                  <Link href={`/project/${project.id}`}>
+                  <Link to="">
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={project.image}
