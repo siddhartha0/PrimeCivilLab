@@ -97,7 +97,7 @@ export const Projects = () => {
                   exit={{ opacity: 0 }}
                   className="group relative overflow-hidden"
                 >
-                  <Link to={`projects/project-view/${project.id}`}>
+                  <Link to={`project-view/${project.id}`}>
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={project.image}
