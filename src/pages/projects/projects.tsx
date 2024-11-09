@@ -58,7 +58,9 @@ export const Projects = () => {
                 Home
               </Link>
               <span>/</span>
-              <span>Projects</span>
+              <Text usage="brand" size="body-base-default">
+                Projects
+              </Text>
             </div>
           </div>
         </section>
