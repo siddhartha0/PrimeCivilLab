@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Projects } from "../../utils/Mocks";
 import { LandingPageLayout } from "../../components/common/landingpagelayout";
+import { Text } from "../../components/units";
 
 export default function ProjectView() {
   const { id } = useParams();
@@ -19,7 +20,7 @@ export default function ProjectView() {
   return (
     <LandingPageLayout>
       <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl flex flex-col gap-4 mx-auto">
           <Link
             to="/projects"
             className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6"
@@ -27,6 +28,22 @@ export default function ProjectView() {
             <Icon icon="eva:arrow-back-fill" className="w-4 h-4 mr-2" />
             Back to Projects
           </Link>
+          <div className=" flex flex-col gap-3 max-w-7xl   sm:px-6 lg:px-8">
+            <div className="flex space-x-2 text-black">
+              <Link to="/" className="hover:text-brand">
+                Home
+              </Link>
+              <span>/</span>
+              <Link to="/projects" className="hover:text-brand">
+                Projects
+              </Link>
+              <span>/</span>
+              <Text usage="brand" size="body-base-default">
+                Project-Details
+              </Text>
+            </div>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
