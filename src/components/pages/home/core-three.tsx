@@ -50,7 +50,7 @@ export const CoreThree = () => {
       </section>
 
       <section id="project-gallery-view" className="grid grid-cols-3 gap-8">
-        {Projects.map((project, i) => {
+        {Projects.slice(0, 5).map((project, i) => {
           return (
             <div
               key={project.title + i}
