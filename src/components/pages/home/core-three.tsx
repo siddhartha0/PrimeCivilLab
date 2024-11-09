@@ -39,7 +39,11 @@ export const CoreThree = () => {
         </div>
 
         <div className="flex flex-col gap-1 group/more" id="more-div">
-          <Link to="" id="more-link" className="relative text-fadish-grey">
+          <Link
+            to="/projects"
+            id="more-link"
+            className="relative text-fadish-grey"
+          >
             More
           </Link>
           <motion.div
