@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Text } from "../../units";
 import { motion } from "framer-motion";
 import { Projects } from "../../../utils/Mocks";
 import bg from "../../../assets/images/blog1.jpg";
 
 export const CoreThree = () => {
+  const nav = useNavigate();
   return (
     <div
       className="flex flex-col gap-8 px-32 py-16 w-full"
@@ -96,6 +97,7 @@ export const CoreThree = () => {
                     usage="brand"
                     className="mt-7 text-white font-semibold py-2 rounded"
                     id="button"
+                    onClick={() => nav(`/projects/project-view/${project.id}`)}
                   >
                     View
                   </Button>
