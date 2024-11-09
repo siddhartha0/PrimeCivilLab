@@ -28,7 +28,7 @@ export default function ProjectView() {
             <Icon icon="eva:arrow-back-fill" className="w-4 h-4 mr-2" />
             Back to Projects
           </Link>
-          <div className=" flex flex-col gap-3 max-w-7xl   sm:px-6 lg:px-8">
+          <div className=" flex flex-col gap-3 max-w-7xl">
             <div className="flex space-x-2 text-black">
               <Link to="/" className="hover:text-brand">
                 Home
