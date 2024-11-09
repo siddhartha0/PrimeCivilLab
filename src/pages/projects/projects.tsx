@@ -7,35 +7,40 @@ import { Projects as ProjectData } from "../../utils/Mocks";
 import { Link } from "react-router-dom";
 
 export const ProjectsLayoutData = [
-  {
-    id: 1,
-    title: "All",
-  },
-  {
-    id: 2,
-    title: "Recents",
-  },
-  {
-    id: 3,
-    title: "Geo Technical",
-  },
-  {
-    id: 4,
-    title: "Soil Engineering",
-  },
+  { id: 1, title: "All", content: "all" },
+  { id: 2, title: "Recents", content: "recent" },
+  { id: 3, title: "Geo Technical", content: "Geo Engineering" },
+  { id: 4, title: "Soil Engineering", content: "Soil Engineering" },
 ];
 
 export const Projects = () => {
   const [currentLayoutIndex, setCurrentLayoutIndex] = useState(1);
+  const [cateogoryName, setCategoryName] = useState("all");
+  const [prevLayoutIndex, setPrevLayoutIndex] = useState(1); // Track previous layout index
+
+  // Determine direction based on the category change
+  const direction = currentLayoutIndex > prevLayoutIndex ? -100 : 100;
+
+  // Filter projects based on category and recency
+  const filterProjects = () => {
+    const now = new Date();
+    return ProjectData.filter((project) => {
+      if (cateogoryName === "all") return true;
+      if (cateogoryName === "recent") {
+        const projectDate = new Date(project.date);
+        const oneYearAgo = new Date(now.setFullYear(now.getFullYear() - 1));
+        return projectDate >= oneYearAgo;
+      }
+      return project.category === cateogoryName;
+    });
+  };
 
   return (
     <LandingPageLayout>
       <div className="flex flex-col" id="parent">
         <section
-          className="h-64 flex place-items-center justify-around bg-cover bg-center relative font-sans "
-          style={{
-            background: `url(${bg})`,
-          }}
+          className="h-64 flex place-items-center justify-around bg-cover bg-center relative font-sans"
+          style={{ background: `url(${bg})` }}
           id="banner"
         >
           <div className="absolute inset-0 bg-black/50" />
@@ -63,7 +68,11 @@ export const Projects = () => {
             {ProjectsLayoutData.map((category) => (
               <button
                 key={category.id}
-                onClick={() => setCurrentLayoutIndex(category.id)}
+                onClick={() => {
+                  setPrevLayoutIndex(currentLayoutIndex); // Update previous layout index
+                  setCurrentLayoutIndex(category.id);
+                  setCategoryName(category.content);
+                }}
                 className={`flex flex-col cursor-pointer gap-1 group/recent text-black-4 ${
                   currentLayoutIndex === category.id
                     ? "text-brand font-medium"
@@ -71,9 +80,8 @@ export const Projects = () => {
                 } `}
               >
                 {category.title}
-
                 <motion.div
-                  className={`h-[2px] w-full top-7 bg-brand origin-left  scale-x-0 group-hover/recent:scale-x-100 transition-transform duration-300`}
+                  className={`h-[2px] w-full top-7 bg-brand origin-left scale-x-0 group-hover/recent:scale-x-100 transition-transform duration-300`}
                   id="bottom-animated-border"
                 />
               </button>
@@ -83,18 +91,22 @@ export const Projects = () => {
 
         {/* Projects Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            <AnimatePresence>
-              {ProjectData.map((project, i) => (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={cateogoryName} // Change key when category changes
+              initial={{ opacity: 0, x: direction }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -direction }}
+              transition={{ duration: 0.5 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {filterProjects().map((project) => (
                 <motion.div
-                  key={i}
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  key={project.id}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.3 }}
                   className="group relative overflow-hidden"
                 >
                   <Link to={`project-view/${project.id}`}>
@@ -118,11 +130,10 @@ export const Projects = () => {
                   </Link>
                 </motion.div>
               ))}
-            </AnimatePresence>
-          </motion.div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
-      ;
     </LandingPageLayout>
   );
 };
