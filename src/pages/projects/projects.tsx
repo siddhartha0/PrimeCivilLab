@@ -1,9 +1,9 @@
-import { LandingPageLayout } from "../components/common/landingpagelayout";
-import bg from "../assets/images/slider6.jpg";
-import { Text } from "../components/units";
+import { LandingPageLayout } from "../../components/common/landingpagelayout";
+import bg from "../../assets/images/slider6.jpg";
+import { Text } from "../../components/units";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { Projects as ProjectData } from "../utils/Mocks";
+import { Projects as ProjectData } from "../../utils/Mocks";
 import { Link } from "react-router-dom";
 
 export const ProjectsLayoutData = [
