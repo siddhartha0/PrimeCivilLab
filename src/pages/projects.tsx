@@ -31,18 +31,36 @@ export const Projects = () => {
   return (
     <LandingPageLayout>
       <div className="flex flex-col" id="parent">
+        <section
+          className="h-64 flex place-items-center justify-around bg-cover bg-center font-sans "
+          style={{
+            background: `url(${bg})`,
+          }}
+          id="banner"
+        >
+          <Text usage="click" size="heading-lg-mid">
+            Projects
+          </Text>
+        </section>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex justify-center space-x-8">
             {ProjectsLayoutData.map((category) => (
               <button
                 key={category.id}
-                // onClick={() => setActiveCategory(category.id)}
-                className={`text-lg font-medium transition-colors",
-                  activeCategory === category.id
-                    ? "text-orange-500"
-                    : "text-gray-600 hover:text-orange-500"`}
+                onClick={() => setCurrentLayoutIndex(category.id)}
+                className={`flex flex-col cursor-pointer gap-1 group/recent text-black-4 ${
+                  currentLayoutIndex === category.id
+                    ? "text-brand font-medium"
+                    : ""
+                } `}
               >
                 {category.title}
+
+                <motion.div
+                  className={`h-[2px] w-full top-7 bg-brand origin-left  scale-x-0 group-hover/recent:scale-x-100 transition-transform duration-300`}
+                  id="bottom-animated-border"
+                />
               </button>
             ))}
           </div>
@@ -74,7 +92,7 @@ export const Projects = () => {
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <div className="text-orange-500 font-medium mb-2 capitalize">
+                        <div className="text-orange-500 font-medium mb-2 text-fadish-white capitalize">
                           {project.category.replace("-", " ")}
                         </div>
                         <h2 className="text-xl font-bold text-white">
@@ -88,45 +106,6 @@ export const Projects = () => {
             </AnimatePresence>
           </motion.div>
         </div>
-
-        <section
-          className="h-64 flex place-items-center justify-around bg-cover bg-center font-sans "
-          style={{
-            background: `url(${bg})`,
-          }}
-          id="banner"
-        >
-          <Text usage="click" size="heading-lg-mid">
-            Projects
-          </Text>
-        </section>
-
-        <section id="content-div" className="flex flex-col gap-4 p-14">
-          <div className="flex place-items-center gap-4">
-            {ProjectsLayoutData.map((layout) => (
-              <div
-                className={`flex flex-col cursor-pointer gap-1 group/recent `}
-                id="recent-div"
-                key={layout.id}
-              >
-                <p
-                  id="recent-link"
-                  className={`text-black-4 ${
-                    currentLayoutIndex === layout.id
-                      ? "text-brand font-medium"
-                      : ""
-                  }`}
-                >
-                  {layout.title}
-                </p>
-                <motion.div
-                  className={`h-[2px] w-full top-7 bg-brand origin-left  scale-x-0 group-hover/recent:scale-x-100 transition-transform duration-300`}
-                  id="bottom-animated-border"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
       ;
     </LandingPageLayout>
