@@ -1,8 +1,9 @@
 import { LandingPageLayout } from "../components/common/landingpagelayout";
 import bg from "../assets/images/slider6.jpg";
 import { Text } from "../components/units";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ProjectsLayoutData = [
   {
@@ -29,6 +30,64 @@ export const Projects = () => {
   return (
     <LandingPageLayout>
       <div className="flex flex-col" id="parent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex justify-center space-x-8">
+            {ProjectsLayoutData.map((category) => (
+              <button
+                key={category.id}
+                // onClick={() => setActiveCategory(category.id)}
+                className={`text-lg font-medium transition-colors",
+                  activeCategory === category.id
+                    ? "text-orange-500"
+                    : "text-gray-600 hover:text-orange-500"`}
+              >
+                {category.title}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+          <motion.div
+            layout
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <AnimatePresence>
+              {Projects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="group relative overflow-hidden"
+                >
+                  <Link href={`/project/${project.id}`}>
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <div className="text-orange-500 font-medium mb-2 capitalize">
+                          {project.category.replace("-", " ")}
+                        </div>
+                        <h2 className="text-xl font-bold text-white">
+                          {project.title}
+                        </h2>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </div>
+
         <section
           className="h-64 flex place-items-center justify-around bg-cover bg-center font-sans "
           style={{
