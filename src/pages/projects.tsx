@@ -32,15 +32,30 @@ export const Projects = () => {
     <LandingPageLayout>
       <div className="flex flex-col" id="parent">
         <section
-          className="h-64 flex place-items-center justify-around bg-cover bg-center font-sans "
+          className="h-64 flex place-items-center justify-around bg-cover bg-center relative font-sans "
           style={{
             background: `url(${bg})`,
           }}
           id="banner"
         >
-          <Text usage="click" size="heading-lg-mid">
-            Projects
-          </Text>
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 flex flex-col justify-center gap-3 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Text
+              size="heading-lg-default"
+              usage="click"
+              secondaryFont
+              className="uppercase"
+            >
+              Projects
+            </Text>
+            <div className="flex items-center space-x-2 text-white/80">
+              <Link to="/" className="hover:text-brand">
+                Home
+              </Link>
+              <span>/</span>
+              <span>Projects</span>
+            </div>
+          </div>
         </section>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
